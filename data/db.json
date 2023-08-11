@@ -1,0 +1,214 @@
+{
+  "users": [
+    {
+      "login": "demo",
+      "password": "Demo666!",
+      "id": 1
+    },
+    {
+      "login": "maciek",
+      "password": "Qwerty123!",
+      "id": 2
+    }
+  ],
+  "login": [
+    {
+      "login": "demo",
+      "username": "demo",
+      "password": "Demo666!",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik1hY2llayIsImlhdCI6MTAzMjAxMDgyMDIzfQ.g90HH2wJq6NvFI6JTMKt5KLbjc0ZuoyKV55nZax-ZhM",
+      "id": 1
+    },
+    {
+      "login": "maciek",
+      "username": "maciek",
+      "password": "Qwerty123!",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkRlbW8iLCJpYXQiOjEwMzIwMTA4MjAyM30.OCKFq5pZ0g9-bPUPaxQTZtnUWLcKcb7lmUOEPzPKdXU",
+      "id": 2
+    }
+  ],
+  "cars": [
+    {
+      "brand": "Ford",
+      "model": "Mustang 1",
+      "year": "1967",
+      "milage": "100000",
+      "id": 1,
+      "url": "https://czasnaklasyka.pl/wp-content/uploads/2022/12/gt500-6.jpeg",
+      "price": 400
+    },
+    {
+      "brand": "Chevy",
+      "model": "Camaro 1",
+      "year": "2023",
+      "milage": "15",
+      "id": 2,
+      "price": 350,
+      "url": "https://hips.hearstapps.com/hmg-prod/images/2019-chevrolet-camaro-2-0t-1le-6mt-106-1539790974.jpg?crop=0.678xw:0.555xh;0.248xw,0.403xh&resize=1200:*"
+    },
+    {
+      "brand": "Opel",
+      "model": "Astra 1",
+      "year": "1999",
+      "milage": "300000",
+      "id": 3,
+      "price": 100,
+      "url": "https://szafraninwestycje.pl/wp-content/uploads/2023/02/IMG_2941_wynik-scaled.jpg"
+    },
+    {
+      "brand": "Mercedes",
+      "model": "S-class 1",
+      "year": "2023",
+      "milage": "1",
+      "id": 4,
+      "price": 500,
+      "url": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2023/02/17132645/2023_mercedes_s_580e.jpg"
+    },
+    {
+      "brand": "Ford",
+      "model": "Mustang 2",
+      "year": "1967",
+      "milage": "100000",
+      "id": 5,
+      "url": "https://czasnaklasyka.pl/wp-content/uploads/2022/12/gt500-6.jpeg",
+      "price": 400
+    },
+    {
+      "brand": "Chevy",
+      "model": "Camaro 2",
+      "year": "2023",
+      "milage": "15",
+      "id": 6,
+      "price": 350,
+      "url": "https://hips.hearstapps.com/hmg-prod/images/2019-chevrolet-camaro-2-0t-1le-6mt-106-1539790974.jpg?crop=0.678xw:0.555xh;0.248xw,0.403xh&resize=1200:*"
+    },
+    {
+      "brand": "Opel",
+      "model": "Astra 2",
+      "year": "1999",
+      "milage": "300000",
+      "id": 7,
+      "price": 100,
+      "url": "https://szafraninwestycje.pl/wp-content/uploads/2023/02/IMG_2941_wynik-scaled.jpg"
+    },
+    {
+      "brand": "Mercedes",
+      "model": "S-class 2",
+      "year": "2023",
+      "milage": "1",
+      "id": 8,
+      "price": 500,
+      "url": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2023/02/17132645/2023_mercedes_s_580e.jpg"
+    },
+    {
+      "brand": "Ford",
+      "model": "Mustang 3",
+      "year": "1967",
+      "milage": "100000",
+      "id": 9,
+      "url": "https://czasnaklasyka.pl/wp-content/uploads/2022/12/gt500-6.jpeg",
+      "price": 400
+    },
+    {
+      "brand": "Chevy",
+      "model": "Camaro 3",
+      "year": "2023",
+      "milage": "15",
+      "id": 10,
+      "price": 350,
+      "url": "https://hips.hearstapps.com/hmg-prod/images/2019-chevrolet-camaro-2-0t-1le-6mt-106-1539790974.jpg?crop=0.678xw:0.555xh;0.248xw,0.403xh&resize=1200:*"
+    },
+    {
+      "brand": "Opel",
+      "model": "Astra 3",
+      "year": "1999",
+      "milage": "300000",
+      "id": 11,
+      "price": 100,
+      "url": "https://szafraninwestycje.pl/wp-content/uploads/2023/02/IMG_2941_wynik-scaled.jpg"
+    },
+    {
+      "brand": "Mercedes",
+      "model": "S-class 3",
+      "year": "2023",
+      "milage": "1",
+      "id": 12,
+      "price": 500,
+      "url": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2023/02/17132645/2023_mercedes_s_580e.jpg"
+    },
+    {
+      "brand": "Ford",
+      "model": "Mustang 4",
+      "year": "1967",
+      "milage": "100000",
+      "id": 13,
+      "url": "https://czasnaklasyka.pl/wp-content/uploads/2022/12/gt500-6.jpeg",
+      "price": 400
+    },
+    {
+      "brand": "Chevy",
+      "model": "Camaro 4",
+      "year": "2023",
+      "milage": "15",
+      "id": 14,
+      "price": 350,
+      "url": "https://hips.hearstapps.com/hmg-prod/images/2019-chevrolet-camaro-2-0t-1le-6mt-106-1539790974.jpg?crop=0.678xw:0.555xh;0.248xw,0.403xh&resize=1200:*"
+    },
+    {
+      "brand": "Opel",
+      "model": "Astra 4",
+      "year": "1999",
+      "milage": "300000",
+      "id": 15,
+      "price": 100,
+      "url": "https://szafraninwestycje.pl/wp-content/uploads/2023/02/IMG_2941_wynik-scaled.jpg"
+    },
+    {
+      "brand": "Mercedes",
+      "model": "S-class 4",
+      "year": "2023",
+      "milage": "1",
+      "id": 16,
+      "price": 500,
+      "url": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2023/02/17132645/2023_mercedes_s_580e.jpg"
+    }
+  ],
+  "cars-back-up": [
+    {
+      "brand": "Ford",
+      "model": "Mustang",
+      "year": "1967",
+      "milage": "100000",
+      "id": 1,
+      "url": "https://czasnaklasyka.pl/wp-content/uploads/2022/12/gt500-6.jpeg",
+      "price": 400
+    },
+    {
+      "brand": "Chevy",
+      "model": "Camaro",
+      "year": "2023",
+      "milage": "15",
+      "id": 2,
+      "price": 350,
+      "url": "https://hips.hearstapps.com/hmg-prod/images/2019-chevrolet-camaro-2-0t-1le-6mt-106-1539790974.jpg?crop=0.678xw:0.555xh;0.248xw,0.403xh&resize=1200:*"
+    },
+    {
+      "brand": "Opel",
+      "model": "Astra",
+      "year": "1999",
+      "milage": "300000",
+      "id": 3,
+      "price": 100,
+      "url": "https://szafraninwestycje.pl/wp-content/uploads/2023/02/IMG_2941_wynik-scaled.jpg"
+    },
+    {
+      "brand": "Mercedes",
+      "model": "S-class",
+      "year": "2023",
+      "milage": "1",
+      "id": 4,
+      "price": 500,
+      "url": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2023/02/17132645/2023_mercedes_s_580e.jpg"
+    }
+  ]
+}

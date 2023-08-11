@@ -1,0 +1,32 @@
+.add-car-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.form {
+  padding: 10%px;
+  width: 30%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #1976d2;
+  border-radius: 10px;
+  background-color: #1976d238;
+}
+
+.input-field {
+  border: 2px solid #1976d2;
+  border-radius: 3px;
+  background-color: #fff;
+  width: 90%;
+}
+
+.button {
+  width: 90%;
+}

@@ -1,0 +1,30 @@
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.form {
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #1976d2;
+  border-radius: 10px;
+  background-color: #1976d238;
+}
+
+.text-field {
+  border: 2px solid #1976d2;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.button {
+  cursor: pointer;
+}
