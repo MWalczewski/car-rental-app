@@ -7,9 +7,11 @@ import { useNavigate } from "react-router-dom";
 import "./styles.css";
 import { CarsData } from "../../types/types";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const AddCar = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const carAddValidationSchema = yup.object().shape({
     brand: yup.string().required("brand is required!"),
@@ -64,17 +66,17 @@ const AddCar = () => {
   return (
     <>
       <div className="add-car-container">
-        <h1>Add a car</h1>
+        <h1>{t("Add a car")}</h1>
         <Formik<CarsData>
           initialValues={{
             id: 0,
             brand: "",
             model: "",
-            year: null,
+            year: "",
             url: "",
-            milage: null,
-            price: null,
-            datesRented: null,
+            milage: "",
+            price: "",
+            datesRented: [],
           }}
           validationSchema={carAddValidationSchema}
           onSubmit={(values) => handleAddCar(values)}
@@ -83,20 +85,20 @@ const AddCar = () => {
             <Form onSubmit={handleSubmit} className="form">
               <TextField
                 className="input-field"
-                label="Brand"
+                label={t("Brand")}
                 type="text"
                 name="brand"
-                placeholder="car's brand"
+                placeholder={t("car's brand")}
                 value={values.brand}
                 onChange={handleChange}
               />
               <ErrorMessage name="brand" />
               <TextField
                 className="input-field"
-                label="Model"
+                label={t("Model")}
                 type="text"
                 name="model"
-                placeholder="car's model"
+                placeholder={t("car's model")}
                 value={values.model}
                 onChange={handleChange}
               />
@@ -104,10 +106,10 @@ const AddCar = () => {
 
               <TextField
                 className="input-field"
-                label="Year"
+                label={t("Year")}
                 type="number"
                 name="year"
-                placeholder="car's year"
+                placeholder={t("car's year")}
                 value={values.year}
                 onChange={handleChange}
               />
@@ -115,10 +117,10 @@ const AddCar = () => {
 
               <TextField
                 className="input-field"
-                label="Picture URL"
+                label={t("Picture URL")}
                 type="text"
                 name="url"
-                placeholder="car's url"
+                placeholder={t("car's url")}
                 value={values.url}
                 onChange={handleChange}
               />
@@ -126,10 +128,10 @@ const AddCar = () => {
 
               <TextField
                 className="input-field"
-                label="Milage"
+                label={t("Milage")}
                 type="number"
                 name="milage"
-                placeholder="car's milage"
+                placeholder={t("car's milage")}
                 value={values.milage}
                 onChange={handleChange}
               />
@@ -137,16 +139,16 @@ const AddCar = () => {
 
               <TextField
                 className="input-field"
-                label="Price per day"
+                label={t("Price per day")}
                 type="number"
                 name="price"
-                placeholder="car's price per day"
+                placeholder={t("car's price per day")}
                 value={values.price}
                 onChange={handleChange}
               />
               <ErrorMessage name="price" />
               <Button className="button" type="submit" variant="contained">
-                Add Car
+                {t("Add a car")}
               </Button>
             </Form>
           )}

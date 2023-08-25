@@ -25,3 +25,5 @@ export const useAxiosGet = <T>(url: string, initialState: T): [T, boolean] => {
 
   return [data, loading];
 };
+
+//  npx json-server --watch data/db.json --port 9000

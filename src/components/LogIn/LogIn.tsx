@@ -1,80 +1,91 @@
 import { useContext } from "react";
-import { LoginContext } from "../../contexts/LoginContext";
-import { Button, TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { Formik, Form, ErrorMessage } from "formik";
+import { AuthContext } from "../../contexts/AuthContext";
+import { useTranslation } from "react-i18next";
+import { LoginData } from "../../types/types";
 import * as yup from "yup";
-import { USERS_URL } from "../../mock/URLs";
+import { ErrorMessage, Form, Formik } from "formik";
+import { Button, TextField } from "@mui/material";
+import axios from "axios";
+import { JWT_LOGIN_URL } from "../../mock/URLs";
 import "./styles.css";
-import { useAxiosGet } from "../../hooks/useAxiosGet";
-import { LoginData, UsersData } from "../../types/types";
 
-const LogIn = () => {
-  const { loggedUser, setLoggedUser } = useContext(LoginContext);
-
-  const [usersData] = useAxiosGet<UsersData[] | null>(`${USERS_URL}`, []);
+const Login = () => {
+  const { setAuth } = useContext(AuthContext);
+  const { t } = useTranslation();
 
   const navigate = useNavigate();
 
   const userLoginValidationSchema = yup.object().shape({
-    login: yup.string().lowercase().required("Login is required!"),
-    password: yup.string().required("Password is required!"),
+    username: yup.string().lowercase().required(t("Login is required!")),
+    password: yup.string().required(t("Password is required!")),
   });
 
-  const handleCorrectLogin = () => {
-    alert("user logged in");
-    setLoggedUser(true);
-    navigate("/");
+  const handleLogin = (values: LoginData) => {
+    const username = values.username;
+    const password = values.password;
+
+    axios
+      .post(JWT_LOGIN_URL, {
+        username,
+        password,
+      })
+      .then((response) => {
+        console.log("response", response);
+        localStorage.setItem(
+          "login",
+          JSON.stringify({
+            userLogin: true,
+            token: response.data.access_token,
+          })
+        );
+
+        setAuth(true);
+        navigate("/");
+        // history.push("/"); hwo to replace prev?
+      });
+  };
+
+  const initialValues = {
+    username: "",
+    password: "",
   };
 
   return (
     <>
       <div className="login-container">
-        <h1>Log-In</h1>
+        <h1>{t("Log-In")}</h1>
         <Formik<LoginData>
-          initialValues={{
-            login: "",
-            password: "",
-          }}
+          initialValues={initialValues}
           validationSchema={userLoginValidationSchema}
-          onSubmit={(values) => {
-            const loggingUser = usersData?.find((user) => {
-              return user.login === values.login;
-            });
-            console.log(loggingUser);
-            // eslint-disable-next-line no-lone-blocks
-            {
-              loggingUser?.login === values.login &&
-              loggingUser?.password === values.password
-                ? handleCorrectLogin()
-                : alert("incorrect login or password!");
-            }
-          }}
+          onSubmit={(values) => handleLogin(values)}
         >
           {({ handleSubmit, values, handleChange }) => (
             <Form onSubmit={handleSubmit} className="form">
               <TextField
                 className="text-field"
-                label="Login"
+                label={t("Username")}
                 type="text"
-                name="login"
-                placeholder="login"
-                value={values.login}
+                name="username"
+                placeholder="Username"
+                value={values.username}
                 onChange={handleChange}
               />
-              <ErrorMessage name="login" />
+              <ErrorMessage name="username" />
+
               <TextField
                 className="text-field"
-                label="Password"
+                label={t("Password")}
                 type="password"
                 name="password"
-                placeholder="password"
+                placeholder={t("Password")}
                 value={values.password}
                 onChange={handleChange}
               />
               <ErrorMessage name="password" />
+
               <Button className="button" type="submit" variant="contained">
-                SUBMIT
+                {t("Submit")}
               </Button>
             </Form>
           )}
@@ -84,4 +95,4 @@ const LogIn = () => {
   );
 };
 
-export default LogIn;
+export default Login;

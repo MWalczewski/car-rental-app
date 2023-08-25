@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-import { useFetch } from "../../hooks/useFetch";
 import { CARS_URL } from "../../mock/URLs";
 import EditForm from "./EditForm";
 import "./styles.css";
@@ -23,6 +21,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import { CarsData, CarProps, Periods } from "../../types/types";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
+import { useAxiosGet } from "../../hooks/useAxiosGet";
 
 const style = {
   position: "absolute" as "absolute",
@@ -40,15 +40,16 @@ const style = {
 
 const Edit = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const [carToEdit, setCarToEdit] = useState<{
     id: number;
     brand: string;
     model: string;
-    year: number | null;
+    year: number | null | string;
     url: string;
-    milage: number | null;
-    price: number | null;
+    milage: number | null | string;
+    price: number | null | string;
     datesRented: Periods[] | null;
   }>({
     id: 0,
@@ -61,23 +62,16 @@ const Edit = () => {
     datesRented: [],
   });
 
-  const [carsData] = useFetch<CarsData[]>(`${CARS_URL}`, []);
-
-  const handleDelete = (index: number) => {
-    console.log("index of car to be deleted: ", index);
-    // below code is working - removing selected car from db.json but commented for the purpose of building app
-    // axios.delete(`${CARS_URL}/${index}`);
-    // navigate("/");
-  };
+  const [carsData] = useAxiosGet<CarsData[]>(`${CARS_URL}`, []);
 
   const handleAddToEdit = (car: {
     id: number;
     brand: string;
     model: string;
-    year: number | null;
+    year: number | null | string;
     url: string;
-    milage: number | null;
-    price: number | null;
+    milage: number | null | string;
+    price: number | null | string;
     datesRented: Periods[] | null;
   }) => {
     console.log("index of car added to be edited: ", car);
@@ -114,22 +108,26 @@ const Edit = () => {
         </IconButton>
         <Modal open={openDeleteModal} onClose={handleCloseDeleteModal}>
           <Box sx={{ ...style, width: 400 }}>
-            <p>Are you sure you want to delete this car from database?</p>
+            <p>
+              {t("Are you sure you want to delete this car from database?")}
+            </p>
             <Button
               onClick={() => handleDelete_OpenConfirmationModal(props.id)}
             >
-              Yes
+              {t("Yes")}
             </Button>
             <Modal
               open={openConfirmationModal}
               onClose={handleCloseConfirmationModal}
             >
               <Box sx={{ ...style, width: 200 }}>
-                <p>Car deleted!</p>
-                <Button onClick={handleCloseConfirmationModal}>Close</Button>
+                <p>{t("Car deleted")}</p>
+                <Button onClick={handleCloseConfirmationModal}>
+                  {t("Close")}
+                </Button>
               </Box>
             </Modal>
-            <Button onClick={handleCloseDeleteModal}>No</Button>
+            <Button onClick={handleCloseDeleteModal}>{t("No")}</Button>
           </Box>
         </Modal>
       </>
@@ -146,9 +144,6 @@ const Edit = () => {
         <TableCell align="right">{props.milage}</TableCell>
         <TableCell align="right">{props.price}</TableCell>
         <TableCell align="right">
-          {/* <IconButton onClick={() => handleDelete(props.id)}>
-            <DeleteIcon />
-          </IconButton> */}
           <DeleteModal
             id={props.id}
             brand={props.brand}
@@ -170,9 +165,7 @@ const Edit = () => {
   return (
     <>
       <div className="editor-container">
-        {/* <h3>modal</h3> */}
-        {/* <NestedModal /> */}
-        <h1>Car Editor</h1>
+        <h1>{t("Car Editor")}</h1>
         {Object.keys(carToEdit.brand).length === 0 ? (
           <TableContainer
             component={Paper}
@@ -181,11 +174,11 @@ const Edit = () => {
             <Table size="small">
               <TableHead>
                 <TableRow>
-                  <TableCell>Car</TableCell>
-                  <TableCell align="right">Year</TableCell>
-                  <TableCell align="right">Milage</TableCell>
-                  <TableCell align="right">Price per day</TableCell>
-                  <TableCell align="right">Action</TableCell>
+                  <TableCell>{t("Car")}</TableCell>
+                  <TableCell align="right">{t("Year")}</TableCell>
+                  <TableCell align="right">{t("Milage")}</TableCell>
+                  <TableCell align="right">{t("Price per day")}</TableCell>
+                  <TableCell align="right">{t("Action")}</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>

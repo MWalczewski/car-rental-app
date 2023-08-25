@@ -11,31 +11,29 @@
       "id": 2
     }
   ],
-  "login": [
-    {
-      "login": "demo",
-      "username": "demo",
-      "password": "Demo666!",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6Ik1hY2llayIsImlhdCI6MTAzMjAxMDgyMDIzfQ.g90HH2wJq6NvFI6JTMKt5KLbjc0ZuoyKV55nZax-ZhM",
-      "id": 1
-    },
-    {
-      "login": "maciek",
-      "username": "maciek",
-      "password": "Qwerty123!",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkRlbW8iLCJpYXQiOjEwMzIwMTA4MjAyM30.OCKFq5pZ0g9-bPUPaxQTZtnUWLcKcb7lmUOEPzPKdXU",
-      "id": 2
-    }
-  ],
   "cars": [
     {
-      "brand": "Ford",
+      "id": 1,
+      "brand": "Fordzik",
       "model": "Mustang 1",
       "year": "1967",
+      "url": "/images/car1.jpg",
       "milage": "100000",
-      "id": 1,
-      "url": "https://czasnaklasyka.pl/wp-content/uploads/2022/12/gt500-6.jpeg",
-      "price": 400
+      "price": 400,
+      "datesRented": [
+        {
+          "from": "2023-08-08",
+          "to": "2023-08-11"
+        },
+        {
+          "from": "2023-08-06",
+          "to": "2023-08-07"
+        },
+        {
+          "from": "2023-09-24",
+          "to": "2023-09-24"
+        }
+      ]
     },
     {
       "brand": "Chevy",
@@ -44,7 +42,13 @@
       "milage": "15",
       "id": 2,
       "price": 350,
-      "url": "https://hips.hearstapps.com/hmg-prod/images/2019-chevrolet-camaro-2-0t-1le-6mt-106-1539790974.jpg?crop=0.678xw:0.555xh;0.248xw,0.403xh&resize=1200:*"
+      "url": "/images/car2.jpg",
+      "datesRented": [
+        {
+          "from": "2023-08-02",
+          "to": "2023-08-04"
+        }
+      ]
     },
     {
       "brand": "Opel",
@@ -53,7 +57,8 @@
       "milage": "300000",
       "id": 3,
       "price": 100,
-      "url": "https://szafraninwestycje.pl/wp-content/uploads/2023/02/IMG_2941_wynik-scaled.jpg"
+      "url": "/images/car3.jpg",
+      "datesRented": []
     },
     {
       "brand": "Mercedes",
@@ -62,7 +67,8 @@
       "milage": "1",
       "id": 4,
       "price": 500,
-      "url": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2023/02/17132645/2023_mercedes_s_580e.jpg"
+      "url": "/images/car4.jpg",
+      "datesRented": []
     },
     {
       "brand": "Ford",
@@ -70,7 +76,7 @@
       "year": "1967",
       "milage": "100000",
       "id": 5,
-      "url": "https://czasnaklasyka.pl/wp-content/uploads/2022/12/gt500-6.jpeg",
+      "url": "/images/car1.jpg",
       "price": 400
     },
     {
@@ -80,7 +86,7 @@
       "milage": "15",
       "id": 6,
       "price": 350,
-      "url": "https://hips.hearstapps.com/hmg-prod/images/2019-chevrolet-camaro-2-0t-1le-6mt-106-1539790974.jpg?crop=0.678xw:0.555xh;0.248xw,0.403xh&resize=1200:*"
+      "url": "/images/car2.jpg"
     },
     {
       "brand": "Opel",
@@ -89,7 +95,7 @@
       "milage": "300000",
       "id": 7,
       "price": 100,
-      "url": "https://szafraninwestycje.pl/wp-content/uploads/2023/02/IMG_2941_wynik-scaled.jpg"
+      "url": "/images/car3.jpg"
     },
     {
       "brand": "Mercedes",
@@ -98,7 +104,7 @@
       "milage": "1",
       "id": 8,
       "price": 500,
-      "url": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2023/02/17132645/2023_mercedes_s_580e.jpg"
+      "url": "/images/car4.jpg"
     },
     {
       "brand": "Ford",
@@ -106,7 +112,7 @@
       "year": "1967",
       "milage": "100000",
       "id": 9,
-      "url": "https://czasnaklasyka.pl/wp-content/uploads/2022/12/gt500-6.jpeg",
+      "url": "/images/car1.jpg",
       "price": 400
     },
     {
@@ -116,7 +122,7 @@
       "milage": "15",
       "id": 10,
       "price": 350,
-      "url": "https://hips.hearstapps.com/hmg-prod/images/2019-chevrolet-camaro-2-0t-1le-6mt-106-1539790974.jpg?crop=0.678xw:0.555xh;0.248xw,0.403xh&resize=1200:*"
+      "url": "/images/car2.jpg"
     },
     {
       "brand": "Opel",
@@ -125,7 +131,7 @@
       "milage": "300000",
       "id": 11,
       "price": 100,
-      "url": "https://szafraninwestycje.pl/wp-content/uploads/2023/02/IMG_2941_wynik-scaled.jpg"
+      "url": "/images/car3.jpg"
     },
     {
       "brand": "Mercedes",
@@ -134,7 +140,7 @@
       "milage": "1",
       "id": 12,
       "price": 500,
-      "url": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2023/02/17132645/2023_mercedes_s_580e.jpg"
+      "url": "/images/car4.jpg"
     },
     {
       "brand": "Ford",
@@ -142,7 +148,7 @@
       "year": "1967",
       "milage": "100000",
       "id": 13,
-      "url": "https://czasnaklasyka.pl/wp-content/uploads/2022/12/gt500-6.jpeg",
+      "url": "/images/car1.jpg",
       "price": 400
     },
     {
@@ -152,7 +158,7 @@
       "milage": "15",
       "id": 14,
       "price": 350,
-      "url": "https://hips.hearstapps.com/hmg-prod/images/2019-chevrolet-camaro-2-0t-1le-6mt-106-1539790974.jpg?crop=0.678xw:0.555xh;0.248xw,0.403xh&resize=1200:*"
+      "url": "/images/car2.jpg"
     },
     {
       "brand": "Opel",
@@ -161,7 +167,7 @@
       "milage": "300000",
       "id": 15,
       "price": 100,
-      "url": "https://szafraninwestycje.pl/wp-content/uploads/2023/02/IMG_2941_wynik-scaled.jpg"
+      "url": "/images/car3.jpg"
     },
     {
       "brand": "Mercedes",
@@ -170,45 +176,167 @@
       "milage": "1",
       "id": 16,
       "price": 500,
-      "url": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2023/02/17132645/2023_mercedes_s_580e.jpg"
+      "url": "/images/car4.jpg"
+    },
+    {
+      "id": 17,
+      "brand": "aaaa",
+      "model": "aaaaa",
+      "year": 1111,
+      "url": "asda",
+      "milage": 1,
+      "price": 1,
+      "datesRented": []
     }
   ],
   "cars-back-up": [
     {
       "brand": "Ford",
-      "model": "Mustang",
+      "model": "Mustang 1",
       "year": "1967",
       "milage": "100000",
       "id": 1,
-      "url": "https://czasnaklasyka.pl/wp-content/uploads/2022/12/gt500-6.jpeg",
-      "price": 400
+      "url": "/images/car1.jpg",
+      "price": 400,
+      "datesRented": []
     },
     {
       "brand": "Chevy",
-      "model": "Camaro",
+      "model": "Camaro 1",
       "year": "2023",
       "milage": "15",
       "id": 2,
       "price": 350,
-      "url": "https://hips.hearstapps.com/hmg-prod/images/2019-chevrolet-camaro-2-0t-1le-6mt-106-1539790974.jpg?crop=0.678xw:0.555xh;0.248xw,0.403xh&resize=1200:*"
+      "url": "/images/car2.jpg",
+      "datesRented": []
     },
     {
       "brand": "Opel",
-      "model": "Astra",
+      "model": "Astra 1",
       "year": "1999",
       "milage": "300000",
       "id": 3,
       "price": 100,
-      "url": "https://szafraninwestycje.pl/wp-content/uploads/2023/02/IMG_2941_wynik-scaled.jpg"
+      "url": "/images/car3.jpg",
+      "datesRented": []
     },
     {
       "brand": "Mercedes",
-      "model": "S-class",
+      "model": "S-class 1",
       "year": "2023",
       "milage": "1",
       "id": 4,
       "price": 500,
-      "url": "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2023/02/17132645/2023_mercedes_s_580e.jpg"
+      "url": "/images/car4.jpg",
+      "datesRented": []
+    },
+    {
+      "brand": "Ford",
+      "model": "Mustang 2",
+      "year": "1967",
+      "milage": "100000",
+      "id": 5,
+      "url": "/images/car1.jpg",
+      "price": 400
+    },
+    {
+      "brand": "Chevy",
+      "model": "Camaro 2",
+      "year": "2023",
+      "milage": "15",
+      "id": 6,
+      "price": 350,
+      "url": "/images/car2.jpg"
+    },
+    {
+      "brand": "Opel",
+      "model": "Astra 2",
+      "year": "1999",
+      "milage": "300000",
+      "id": 7,
+      "price": 100,
+      "url": "/images/car3.jpg"
+    },
+    {
+      "brand": "Mercedes",
+      "model": "S-class 2",
+      "year": "2023",
+      "milage": "1",
+      "id": 8,
+      "price": 500,
+      "url": "/images/car4.jpg"
+    },
+    {
+      "brand": "Ford",
+      "model": "Mustang 3",
+      "year": "1967",
+      "milage": "100000",
+      "id": 9,
+      "url": "/images/car1.jpg",
+      "price": 400
+    },
+    {
+      "brand": "Chevy",
+      "model": "Camaro 3",
+      "year": "2023",
+      "milage": "15",
+      "id": 10,
+      "price": 350,
+      "url": "/images/car2.jpg"
+    },
+    {
+      "brand": "Opel",
+      "model": "Astra 3",
+      "year": "1999",
+      "milage": "300000",
+      "id": 11,
+      "price": 100,
+      "url": "/images/car3.jpg"
+    },
+    {
+      "brand": "Mercedes",
+      "model": "S-class 3",
+      "year": "2023",
+      "milage": "1",
+      "id": 12,
+      "price": 500,
+      "url": "/images/car4.jpg"
+    },
+    {
+      "brand": "Ford",
+      "model": "Mustang 4",
+      "year": "1967",
+      "milage": "100000",
+      "id": 13,
+      "url": "/images/car1.jpg",
+      "price": 400
+    },
+    {
+      "brand": "Chevy",
+      "model": "Camaro 4",
+      "year": "2023",
+      "milage": "15",
+      "id": 14,
+      "price": 350,
+      "url": "/images/car2.jpg"
+    },
+    {
+      "brand": "Opel",
+      "model": "Astra 4",
+      "year": "1999",
+      "milage": "300000",
+      "id": 15,
+      "price": 100,
+      "url": "/images/car3.jpg"
+    },
+    {
+      "brand": "Mercedes",
+      "model": "S-class 4",
+      "year": "2023",
+      "milage": "1",
+      "id": 16,
+      "price": 500,
+      "url": "/images/car4.jpg"
     }
   ]
 }

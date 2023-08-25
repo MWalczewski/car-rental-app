@@ -13,6 +13,7 @@ import {
   Pagination,
 } from "@mui/material";
 import { useAxiosGet } from "../../hooks/useAxiosGet";
+import { useTranslation } from "react-i18next";
 
 const linkStyle = {
   textDecoration: "none",
@@ -20,9 +21,9 @@ const linkStyle = {
 };
 
 const Home = () => {
-  // const [carsData, loading] = useAxiosGet<CarsData[] | null>(`${CARS_URL}`, []);
   const [carsData, loading] = useAxiosGet<CarsData[]>(`${CARS_URL}`, []);
   const [page, setPage] = useState(1);
+  const { t } = useTranslation();
 
   let pageNumbers: number[] = [];
 
@@ -47,18 +48,11 @@ const Home = () => {
   return (
     <>
       <div className="home-page-container">
-        <h1>Welcome to the car rental home page!</h1>
-        <h3>available cars:</h3>
-        <button
-          onClick={() => {
-            console.log(currentCars);
-          }}
-        >
-          console carsData
-        </button>
+        <h1>{t("Welcome to the car rental home page!")}</h1>
+        <h3>{t("available cars:")}</h3>
 
         {loading ? (
-          <h4>Loading ....</h4>
+          <h4>{t("Loading...")}</h4>
         ) : (
           <>
             <Stack spacing={2}>
@@ -99,7 +93,7 @@ const Home = () => {
                             {cars.year} {cars.brand} {cars.model}
                           </Typography>
                           <Typography variant="subtitle1" component="div">
-                            price per day: {cars.price} PLN
+                            {t("Price per day")}: {cars.price} PLN
                           </Typography>
                         </CardContent>
                       </Card>

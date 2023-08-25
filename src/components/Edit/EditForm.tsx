@@ -8,9 +8,11 @@ import { Button, TextField } from "@mui/material";
 import "./styles.css";
 import { CarsData, CarProps } from "../../types/types";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const EditForm = (props: CarProps) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleEditCar = (values: any) => {
     const { id, brand, model, year, url, milage, price, datesRented } = values;
@@ -60,7 +62,7 @@ const EditForm = (props: CarProps) => {
         <Form onSubmit={handleSubmit} className="form">
           <TextField
             className="text-field"
-            label="Brand"
+            label={t("Brand")}
             type="text"
             name="brand"
             value={values.brand}
@@ -69,7 +71,7 @@ const EditForm = (props: CarProps) => {
           <ErrorMessage name="brand" />
           <TextField
             className="text-field"
-            label="Model"
+            label={t("Model")}
             type="text"
             name="model"
             value={values.model}
@@ -78,7 +80,7 @@ const EditForm = (props: CarProps) => {
           <ErrorMessage name="model" />
           <TextField
             className="text-field"
-            label="Year"
+            label={t("Year")}
             type="number"
             name="year"
             value={values.year}
@@ -87,7 +89,7 @@ const EditForm = (props: CarProps) => {
           <ErrorMessage name="year" />
           <TextField
             className="text-field"
-            label="Picture URL"
+            label={t("Picture URL")}
             type="text"
             name="url"
             value={values.url}
@@ -96,7 +98,7 @@ const EditForm = (props: CarProps) => {
           <ErrorMessage name="url" />
           <TextField
             className="text-field"
-            label="Milage"
+            label={t("Milage")}
             type="number"
             name="milage"
             value={values.milage}
@@ -105,7 +107,7 @@ const EditForm = (props: CarProps) => {
           <ErrorMessage name="milage" />
           <TextField
             className="text-field"
-            label="Price per day"
+            label={t("Price per day")}
             type="number"
             name="price"
             value={values.price}
@@ -113,7 +115,7 @@ const EditForm = (props: CarProps) => {
           />
           <ErrorMessage name="price" />
           <Button className="button" type="submit" variant="contained">
-            SUBMIT
+            {t("Submit")}
           </Button>
         </Form>
       )}
