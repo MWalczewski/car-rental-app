@@ -23,12 +23,17 @@ const Car = () => {
   const { addToCart } = useCart();
   const [carsData] = useAxiosGet<CarsData[] | null>(`${CARS_URL}`, []);
   const { t } = useTranslation();
-
   const { id } = useParams();
 
   const selectedCarData = carsData?.find((car) => {
     return car.id.toString() === id;
   });
+
+  const defaultIMG = (e: any) => {
+    e.target.src = carsData?.find((car) => {
+      return car.id === Math.floor(Math.random() * 4);
+    })?.url;
+  };
 
   const handleCarRent = (rangeRented: any) => {
     const shortDates = (date: string) => {
@@ -55,6 +60,7 @@ const Car = () => {
           src={`${selectedCarData?.url}`}
           alt="car logo"
           style={{ width: "400px" }}
+          onError={defaultIMG}
         />
         <Typography variant="h5">
           {t("Price per day")}: {selectedCarData?.price}

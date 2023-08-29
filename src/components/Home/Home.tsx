@@ -45,12 +45,17 @@ const Home = () => {
     setPage(value);
   };
 
+  const defaultIMG = (e: any) => {
+    e.target.src = carsData?.find((car) => {
+      return car.id === Math.floor(Math.random() * 4);
+    })?.url;
+  };
+
   return (
     <>
       <div className="home-page-container">
         <h1>{t("Welcome to the car rental home page!")}</h1>
         <h3>{t("available cars:")}</h3>
-
         {loading ? (
           <h4>{t("Loading...")}</h4>
         ) : (
@@ -83,6 +88,7 @@ const Home = () => {
                           src={`${cars.url}`}
                           alt="car logo"
                           style={{ width: "400px", height: "200px" }}
+                          onError={defaultIMG}
                         />
                         <CardContent>
                           <Typography
