@@ -39,10 +39,8 @@ const Login = () => {
             token: response.data.access_token,
           })
         );
-
         setAuth(true);
         navigate("/");
-        // history.push("/"); hwo to replace prev?
       });
   };
 

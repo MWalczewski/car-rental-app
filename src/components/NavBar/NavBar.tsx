@@ -15,7 +15,9 @@ const NavBar = () => {
   const { openCart, cartQuantity } = useCart();
 
   const handleLogOut = () => {
+    localStorage.removeItem("login");
     setAuth(false);
+    console.log("user logged out");
   };
 
   return (
@@ -24,6 +26,7 @@ const NavBar = () => {
         <span>
           <h3 className="logo">Rent-A-Car</h3>
         </span>
+
         <div className="buttons-container">
           <Button>
             <Link to="/">{t("Home Page")}</Link>
